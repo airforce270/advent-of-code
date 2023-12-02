@@ -10,6 +10,16 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
+  build-2022:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build
+      working-directory: ./2022/rs
+      run: cargo build --verbose
+    - name: Run tests
+      working-directory: ./2022/rs
+      run: cargo test --verbose
   build-2023:
     runs-on: ubuntu-latest
     steps:
