@@ -3,13 +3,15 @@ use std::fmt;
 
 #[derive(Debug)]
 pub struct AocError {
-    pub details: String
+    pub details: String,
 }
 
 impl AocError {
-  pub fn new(msg: &str) -> AocError {
-      AocError{details: msg.to_string()}
-  }
+    pub fn new(msg: &str) -> AocError {
+        AocError {
+            details: msg.to_string(),
+        }
+    }
 }
 
 impl fmt::Display for AocError {
