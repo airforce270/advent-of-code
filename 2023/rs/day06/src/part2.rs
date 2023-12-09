@@ -31,7 +31,7 @@ fn parse_race(input: &str) -> Race {
     let time = parse_line(lines.next().unwrap());
     let distance = parse_line(lines.next().unwrap());
 
- Race { time, distance }
+    Race { time, distance }
 }
 
 fn parse_line(line: &str) -> u64 {
@@ -39,8 +39,9 @@ fn parse_line(line: &str) -> u64 {
         .skip(1)
         .next()
         .unwrap()
-       .replace(" ", "")
-        .parse::<u64>().unwrap()
+        .replace(" ", "")
+        .parse::<u64>()
+        .unwrap()
 }
 
 #[cfg(test)]

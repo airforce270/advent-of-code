@@ -85,7 +85,7 @@ fn calc_gear_ratios(nums: &Vec<PartNum>) -> Vec<u64> {
     let mut gear_ratios: Vec<u64> = vec![];
 
     'num: for (i, num) in nums.iter().enumerate() {
-        for other_num in nums.iter().skip(i+1) {
+        for other_num in nums.iter().skip(i + 1) {
             if num.symbol == other_num.symbol {
                 gear_ratios.push(num.num * other_num.num);
                 continue 'num;
