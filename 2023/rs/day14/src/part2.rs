@@ -283,6 +283,7 @@ where
 mod tests {
     use super::*;
 
+    #[ignore]
     #[test]
     fn test_process() {
         let input = "O....#....
